@@ -35,6 +35,9 @@ public class HelloSpringJDBCApp01 {
 	// 필요 라이브러리
 	// spring-jdbc
 	// spring-tx
+	
+	// main -> service -> DAO
+    // 			   (SungJuk)
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("springjdbc01.xml");
@@ -42,8 +45,19 @@ public class HelloSpringJDBCApp01 {
 		SungJukService sjsrv = (SungJukService) ctx.getBean("sjsrv");
 		
 		// 성적 데이터 생성 후 데이터베이스에 저장
-		sjsrv.newSungJuk();
+		// sjsrv.newSungJuk();
 
+		// 성적 데이터 조회
+		// sjsrv.readAllSungJuk();
+		
+		// 성적 데이터 상세 조회
+		// sjsrv.readOneSungJuk(3);
+		
+		// 성적 데이터 수정
+		// sjsrv.modifySungJuk();
+		
+		// 성적 데이터 삭제
+		sjsrv.removeSungJuk();
 	}
 
 }
