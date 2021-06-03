@@ -17,16 +17,11 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public void newMember() {
 		Member m = new Member("roopy", "zanmang", "루피", "roopy@naver.com");
-		computeMember(m);
 		System.out.println("회원 데이터 생성 완료!");
 		
 		mdao.insertMember(m);
 	}
-
-	private void computeMember(Member m) {
-		
-	}
-
+	
 	@Override
 	public void showAllMember() {
 		StringBuffer sb = new StringBuffer();
