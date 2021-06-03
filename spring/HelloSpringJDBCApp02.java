@@ -10,7 +10,7 @@ public class HelloSpringJDBCApp02 {
 	// myBatis를 이용한 프로젝트
 	
 	// main -> service -> DAO
-	// 				(SungJuk)
+	// 		(SungJuk)
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("springjdbc02.xml");
